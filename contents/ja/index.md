@@ -41,7 +41,7 @@ theme: freud
 
 ---
 
-# ChatGPT とは a
+# ChatGPT とは
 
 ## 基礎知識
 
