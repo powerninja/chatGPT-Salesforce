@@ -45,7 +45,7 @@ theme: freud
 
 ## 基礎知識
 
-[開発者コンソールの基礎](https://trailhead.salesforce.com/ja/content/learn/modules/developer_console)に使い方やできることは記載されています
+GPT3.5 や GPT4 モデルを使用した人工知能チャットボット
 
 ## 開き方
 
