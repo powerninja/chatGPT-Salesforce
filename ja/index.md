@@ -16,7 +16,7 @@ theme: freud
 
 ![height:300](images/qr-code.jpg)
 
-##### スライド:https://tkonishi5515.github.io/Developer_Console/ja/index
+##### スライド:https://powerninja.github.io/chatGPT-Salesforce/ja/index
 
 ##### リポジトリ:https://github.com/powerninja/chatGPT-Salesforce
 
