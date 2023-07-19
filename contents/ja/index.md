@@ -18,7 +18,7 @@ theme: freud
 
 ##### スライド:https://tkonishi5515.github.io/Developer_Console/ja/index
 
-##### リポジトリ:https://github.com/tkonishi5515/Developer_Console
+##### リポジトリ:https://github.com/powerninja/chatGPT-Salesforce
 
 ---
 
@@ -26,17 +26,18 @@ theme: freud
 
 #### 今回の話すこと
 
-- 使い方をデモを含めて共有します
-- 開発者コンソールの基本的な使用方法をお伝えします
+- ChatGPT の基本情報
+- ChatGPT の問題点
+- Salesforce X ChatGPT
 
 ---
 
 # トピックス
 
-1. 開発者コンソールとは
-2. 開発者コンソールでできること
-3. Apex コードの実行(匿名実行)
-4. vsCode との比較
+1. ChatGPT とは
+2. ChatGPT はどんなことができるのか？
+3. ChatGPT の問題点
+4. Salesforce との融合(demo)
 
 ---
 
