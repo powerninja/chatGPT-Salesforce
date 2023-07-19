@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "tech-memo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "marp -s",
+    "build": "marp && cp contents/ja/index.html public"
+  },
+  "marp": {
+    "inputDir": "./contents/ja/",
+    "output": "./contents/ja/"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^2.0.2"
+  }
+}
