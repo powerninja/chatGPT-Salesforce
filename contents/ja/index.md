@@ -1,5 +1,5 @@
 ---
-title: SalesforceとChatGPTについて
+title: Salesforceと生成 AIについて
 marp: true
 paginate: true
 theme: freud
@@ -9,7 +9,7 @@ theme: freud
 <!-- theme: gradient class: blue-->
 <!-- theme: freud class: blue-->
 
-# Salesforce と ChatGPT について <!-- fit -->
+# Salesforce と 生成 AI について <!-- fit -->
 
 </br>
 </br>
@@ -22,44 +22,57 @@ theme: freud
 
 ---
 
+# 前提
+
+- 詳しいロジックについてはお話しできません
+- 進化の早い分野なので、ここで触れた内容は短期間のうちに変わる可能性があります
+- 6 月に行われた社内勉強会「**[2023-06 生成 AI 〜次世代ググる活用法](https://ksaitou.gitlab.io/2023-06_generativeai/)**」を参考にさせていただいてます
+
+---
+
 # はじめに
 
 #### 今回の話すこと
 
-- ChatGPT の基本情報
-- ChatGPT の問題点
-- Salesforce X ChatGPT
+- 生成 AI の基本情報
+- 生成 AI の問題点
+- **Salesforce と 生成 AI**
 
 ---
 
 # トピックス
 
-1. ChatGPT とは
-2. ChatGPT はどんなことができるのか？
-3. ChatGPT の問題点
-4. Salesforce との融合(demo)
+1. 生成 AI とは
+2. 生成 AI の種類
+3. 生成 AI はどんなことができるのか？
+4. 生成 AI の問題点
+5. Salesforce との融合(demo)
 
 ---
 
-# ChatGPT とは
+# 生成 AI とは
 
-## 基礎知識
-
-GPT3.5 や GPT4 モデルを使用した人工知能チャットボット
-
-## 開き方
-
-みなさんもご自身の Dev 環境などで、開いてみましょう
-
-1. 設定のギアアイコンを押下する
-2. 「開発者コンソール」と記載された箇所があるため押下する
-3. 開発者コンソールが開かれる
+- 言語についての超巨大学習モデルを LLM (Large Language Model) という
+  - 話題の ChatGPT は LLM を使っている
+  - [カオスマップ](https://digital-shift.jp/flash_news/FN230607_3)
+    ![height:450](images/ChaosMap.webp)
 
 ---
 
-# 開発者コンソールとは
+# 生成 AI とは
 
-![height:600](images/開発者コンソール_01.png)
+- 特に明確な定義はないが自ら新しいデータを作成するような AI の総称
+  - 新しく文章やコードを作る
+  - 新しく絵・動画を作る
+- データを認識・分析・分類する AI とは対照的
+  - Salesforce 目線だと、レコードの分析ではなくメールの返信内容の生成や、ChatBot の機能で有効だと感じる
+
+---
+
+# 生成 AI とは
+
+- 最近になって、**実用に耐える精度** のものが出てきて話題になっている
+  - 人間しかできないと思われていた高度なタスクについて、予想外にうまく AI が代替してしまう可能性が見えてきて（StableDiffusion / ChatGPT）驚きを与えている状況
 
 ---
 
