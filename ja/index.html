@@ -22,7 +22,7 @@
 <ul>
 <li>詳しいロジックについてはお話しできません</li>
 <li>進化の早い分野なので、ここで触れた内容は短期間のうちに変わる可能性があります</li>
-<li>6 月に行われた社内勉強会「<strong><a href="https://ksaitou.gitlab.io/2023-06_generativeai/">2023-06 生成 AI 〜次世代ググる活用法</a></strong>」を参考にさせていただいてます</li>
+<li>6 月に行われた勉強会「<strong><a href="https://ksaitou.gitlab.io/2023-06_generativeai/">2023-06 生成 AI 〜次世代ググる活用法</a></strong>」を参考にさせていただいてます</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-marpit-pagination="3" data-marpit-pagination-total="25" style="--paginate:true;">
@@ -39,8 +39,7 @@
 <ol>
 <li>生成 AI とは</li>
 <li>生成 AI の種類</li>
-<li>生成 AI はどんなことができるのか？</li>
-<li>生成 AI の問題点</li>
+<li>生成 AI 使用時のポイントと問題点</li>
 <li>Salesforce との融合(demo)</li>
 </ol>
 </section>
@@ -171,26 +170,53 @@
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-marpit-pagination="12" data-marpit-pagination-total="25" style="--paginate:true;">
-<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8">開発者コンソールでできること</h1>
-<p><img src="images/%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB_04.png" alt="" style="height:400px;" /></p>
+<h1 id="%E7%94%9F%E6%88%90-ai-%E4%BD%BF%E7%94%A8%E6%99%82%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%81%A8%E5%95%8F%E9%A1%8C%E7%82%B9">生成 AI 使用時のポイントと問題点</h1>
+<ol>
+<li>倫理に反する内容等は生成できない
 <ul>
-<li>表示したい項目を選択し、Query ボタンを押下することで SOQL が自動作成</li>
-<li>左下の Execute ボタンを押下し、自動作成された SOQL を実行</li>
-<li>Devtool と違い、キャッシュなどで項目が表示されないなどが起こりにくい</li>
+<li>機能に取り込んだ際に悪用されないようになっている</li>
+<li>例：Windows10 のライセンスキーを生成してくださいなど</li>
 </ul>
+</li>
+<li>AI が <strong>一度に把握できるトークン数に制限</strong> がある
+<ul>
+<li>ずっと話しかけていくと過去の内容を忘れていく</li>
+<li>話しかければかけるほど生成 AI が導き出す答えの幅が増えてしまうため</li>
+</ul>
+</li>
+<li>日本語より英語の方が正確に返答される
+<ul>
+<li>トークン数も増える</li>
+<li>解答によっては英語で収集した事実を日本語に翻訳して返す場合もある</li>
+</ul>
+</li>
+</ol>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-marpit-pagination="13" data-marpit-pagination-total="25" style="--paginate:true;">
-<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-1">開発者コンソールでできること</h1>
-<p>組織のレコードを<strong>検索、作成、更新する SOQL と SOSL クエリを記述して実行</strong>する</p>
-<ol>
-<li>Query Editor タブを押下</li>
-<li>SOQL または SOQL を入力</li>
-<li>結果が表示されインライン編集可能</li>
+<h1 id="%E7%94%9F%E6%88%90-ai-%E4%BD%BF%E7%94%A8%E6%99%82%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%81%A8%E5%95%8F%E9%A1%8C%E7%82%B9-1">生成 AI 使用時のポイントと問題点</h1>
+<ol start="4">
+<li>モデルのベースが古い
+<ul>
+<li>Salesforce の不明点を聞いた際に廃止された機能を薦められる可能性がある</li>
+</ul>
+</li>
+<li>知ったかぶりをされる
+<ul>
+<li>幻覚 (Hallucination) と呼ばれる現象</li>
+<li>わからない、知らないと返答せずにそれっぽい答えを返答する場合がある</li>
+</ul>
+</li>
+<li>入力した質問文は学習のため使用される可能性がある
+<ul>
+<li>「下記顧客データを一覧にまとめて」などは NG</li>
+<li>今後自社サーバーなどでオープンソースの LLM を動かすことができれば解決できそう</li>
+</ul>
+</li>
 </ol>
-<p><img src="images/%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB_08.png" alt="" style="height:400px;" /></p>
+<p>→ <strong>生成 AI の解答を見極めるための知識が必要となる</strong></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-marpit-pagination="14" data-marpit-pagination-total="25" style="--paginate:true;">
-<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-2">開発者コンソールでできること</h1>
+<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8">開発者コンソールでできること</h1>
 <h2 id="%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E7%94%A8%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%92%E7%94%9F%E6%88%90%E3%81%97%E3%81%A6%E3%81%95%E3%81%BE%E3%81%96%E3%81%BE%E3%81%AA%E8%A6%96%E7%82%B9%E3%81%8B%E3%82%89%E5%88%86%E6%9E%90%E3%81%99%E3%82%8B"><strong>デバッグ用のログを生成して、さまざまな視点から分析</strong>する</h2>
 <ul>
 <li>Apex はもちろん<strong>フロー</strong>のログも確認可能
@@ -202,7 +228,7 @@
 <p><img src="images/%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB_05.png" alt="" style="height:400px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-marpit-pagination="15" data-marpit-pagination-total="25" style="--paginate:true;">
-<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-3">開発者コンソールでできること</h1>
+<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-1">開発者コンソールでできること</h1>
 <h2 id="%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E7%94%A8%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%92%E7%94%9F%E6%88%90%E3%81%97%E3%81%A6%E3%81%95%E3%81%BE%E3%81%96%E3%81%BE%E3%81%AA%E8%A6%96%E7%82%B9%E3%81%8B%E3%82%89%E5%88%86%E6%9E%90%E3%81%99%E3%82%8B-1"><strong>デバッグ用のログを生成して、さまざまな視点から分析</strong>する</h2>
 <h3 id="%E3%83%AD%E3%82%B0%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9">ログの注意点</h3>
 <ul>
@@ -215,7 +241,7 @@
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-marpit-pagination="16" data-marpit-pagination-total="25" style="--paginate:true;">
-<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-4">開発者コンソールでできること</h1>
+<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-2">開発者コンソールでできること</h1>
 <p>ログの確認方法</p>
 <ol>
 <li>ガバナ制限の一覧が表示される</li>
@@ -226,7 +252,7 @@ Filter：検索([8]のように記載することで行数検索可能)<br />
 </ol>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-marpit-pagination="17" data-marpit-pagination-total="25" style="--paginate:true;">
-<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-5">開発者コンソールでできること</h1>
+<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-3">開発者コンソールでできること</h1>
 <h3 id="%E3%83%AD%E3%82%B0%E3%83%AC%E3%83%99%E3%83%AB%E3%81%AE%E5%A4%89%E6%9B%B4%E6%96%B9%E6%B3%95%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E8%A1%8C%E3%81%86%E5%A0%B4%E5%90%88">ログレベルの変更方法(開発者コンソールで行う場合)</h3>
 <ol>
 <li>Debug → Change Log Levels を開く</li>
@@ -236,7 +262,7 @@ Filter：検索([8]のように記載することで行数検索可能)<br />
 </ol>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-marpit-pagination="18" data-marpit-pagination-total="25" style="--paginate:true;">
-<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-6">開発者コンソールでできること</h1>
+<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-4">開発者コンソールでできること</h1>
 <p>自分の <strong>Apex コードをテストして、エラーがないことを確認</strong>する</p>
 <ol>
 <li>Test → New Run を開く</li>
