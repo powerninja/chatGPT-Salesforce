@@ -21,7 +21,7 @@ theme: freud
 
 # 前提
 
-- ChatGPT や Einstein GPT の詳細の内容については無学のためお話しできません
+- ChatGPT や [Einstein GPT(Sales/Service)](https://www.salesforce.com/news/stories/sales-gpt-service-gpt-ga/) の詳細の内容については無学のためお話しできません
 - 進化の早い分野なので、ここで触れた内容は短期間のうちに変わる可能性があります
 - 6 月に行われた勉強会「**[2023-06 生成 AI 〜次世代ググる活用法](https://ksaitou.gitlab.io/2023-06_generativeai/)**」を参考にさせていただいてます
 
@@ -213,9 +213,9 @@ AND(
 # Salesforce との融合(demo)
 
 1. Open AI API を叩き、既存のレコードの AI に詳しても良い箇所を渡して解答を得る
-   1. Einstein GPT や Salesforce 公式よりは運用コストは安そう
+   1. Einstein GPT(Sales/Service) や Salesforce 公式よりは運用コストは安そう
    2. ただ、補修性や情報漏洩が怖い
-2. Einstein GPT など Salesforce が公式で出す機能を使う
+2. Einstein GPT(Sales/Service) など Salesforce が公式で出す機能を使う
    1. 入力したデータが GPT の学習に使用されないらしい？
    2. 料金は高くなりそう
 
@@ -227,5 +227,5 @@ AND(
   - ローカル PC やサーバー上で動かすことができれば解決
 - Salesforce の構築では、コーディングの箇所(入力規則や Apex)の生成は大いに参考になる
   - 出力されたコードのテストと、正しいかどうかの精査は必要
-- 少しだけ生成系 AI を導入したい場合は、Einstein GPT を使用しなくても(おそらく)画面フローでも実装可能
-  - 自由度は減るが導入の工数や保守性を考えると Einstein GPT の方が良さそう
+- 少しだけ生成系 AI を導入したい場合は、Einstein GPT(Sales/Service) を使用しなくても(おそらく)画面フローでも実装可能
+  - 自由度は減るが導入の工数や保守性を考えると Einstein GPT(Sales/Service) の方が良さそう
