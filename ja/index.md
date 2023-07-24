@@ -11,9 +11,6 @@ theme: freud
 
 # Salesforce と 生成 AI について <!-- fit -->
 
-</br>
-</br>
-
 ![height:300](images/qr-code.jpg)
 
 ##### スライド:https://powerninja.github.io/chatGPT-Salesforce/ja/index
