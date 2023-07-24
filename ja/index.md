@@ -43,7 +43,8 @@ theme: freud
 2. 生成 AI の種類
 3. 生成 AI 使用時のポイントと問題点
 4. Salesforce 実装時の活用事例
-5. Salesforce との融合(demo)
+5. Einstein GPT(Sales/Service)とは
+6. Salesforce との融合(demo)
 
 ---
 
@@ -210,14 +211,50 @@ AND(
 
 ---
 
+# Einstein GPT(Sales/Service)とは
+
+- 米国では料金と詳細が出ている
+- 料金：50 ドル/ユーザ/月
+- バージョン：Unlimited Edition のみ
+  https://www.salesforce.com/news/stories/sales-gpt-service-gpt-ga/
+
+- Trailhead
+  - [Einstein GPT](https://trailhead.salesforce.com/ja/content/learn/modules/einstein-gpt-quick-look/get-started-with-einstein-gpt)
+  - [Sales GPT](https://trailhead.salesforce.com/ja/content/learn/modules/sales-gpt-quick-look)
+  - [Service GPT](https://trailhead.salesforce.com/ja/content/learn/modules/service-gpt-quick-look/get-started-with-service-gpt)
+
+---
+
+# Einstein GPT(Sales/Service)とは
+
+- **信頼性**：データが Salesforce 外に保存されることはない
+- **関連性**：コンテンツは、正確性と完全性を確保するために、各自の環境のデータが使用される
+- **セキュリティ**：Hyperforce 上に構築されており、データプライバシーが確保され、個人識別情報を安全に保持が可能
+- **エコシステム**：大規模言語モデル (LLM) を取り込める
+  - Salesforce のモデルか、任意のモデルか選択が可能
+
+---
+
+# Einstein GPT(Sales/Service)とは
+
+## Sales GPT で可能なこと
+
+(Trailhead より引用)
+
+- **GPT を活用したメール**：プロスペクティング、フォローアップのミーティング、提案書の送信など、パーソナライズされたインパクトのあるメールを大規模に自動作成できます
+- **通話の概要**：重要なメンション、トランスクリプト、アクション項目が以前の通話から自動的にまとめられることにより、担当者は時間を節約し、フォローを改善できます
+- **セールスアシスタント**：この中央ハブは、ミーティングの準備やその他の営業に関するガイダンスの提供に役立ちます
+
+---
+
 # Salesforce との融合(demo)
 
 1. Open AI API を叩き、既存のレコードの AI に詳しても良い箇所を渡して解答を得る
    1. Einstein GPT(Sales/Service) や Salesforce 公式よりは運用コストは安そう
-   2. ただ、補修性や情報漏洩が怖い
+   2. ただ、**保守性や情報漏洩**が怖い
+      1. ビジネスプランが提供された際はここがカバーされる
 2. Einstein GPT(Sales/Service) など Salesforce が公式で出す機能を使う
-   1. 入力したデータが GPT の学習に使用されないらしい？
-   2. 料金は高くなりそう
+   1. Open AI は現状**ビジネスプランを提供していない**ため、基本的には Einstein GPT を使用する(今後提供予定らしい)
 
 ---
 
@@ -227,5 +264,5 @@ AND(
   - ローカル PC やサーバー上で動かすことができれば解決
 - Salesforce の構築では、コーディングの箇所(入力規則や Apex)の生成は大いに参考になる
   - 出力されたコードのテストと、正しいかどうかの精査は必要
-- 少しだけ生成系 AI を導入したい場合は、Einstein GPT(Sales/Service) を使用しなくても(おそらく)画面フローでも実装可能
+- 少しだけ生成系 AI を導入したい場合は、a(Sales/Service) を使用しなくても(おそらく)画面フローでも実装可能
   - 自由度は減るが導入の工数や保守性を考えると Einstein GPT(Sales/Service) の方が良さそう
