@@ -22,7 +22,7 @@ theme: freud
 # 前提
 
 - ChatGPT や [Einstein GPT(Sales/Service)](https://www.salesforce.com/news/stories/sales-gpt-service-gpt-ga/) の詳細の内容については無学のためお話しできません
-- 進化の早い分野なので、ここで触れた内容は短期間のうちに変わる可能性があります
+- 進化の早い分野なので、ここで触れた内容は短期間のうちに変わる可能性があります(もう変わっているかも？)
 - 6 月に行われた勉強会「**[2023-06 生成 AI 〜次世代ググる活用法](https://ksaitou.gitlab.io/2023-06_generativeai/)**」を参考にさせていただいてます
 
 ---
