@@ -65,7 +65,7 @@ theme: freud
 - データを認識・分析・分類する AI とは対照的
   - Salesforce 目線だと、レコードの分析ではなくメールの返信内容の生成や、ChatBot の機能で有効だと感じる
 - 最近になって、**実用に耐える精度** のものが出てきて話題になっている
-  - 人間しかできないと思われていた高度なタスクについて、予想外にうまく AI が代替してしまう可能性が見えてきて（StableDiffusion / ChatGPT）驚きを与えている状況
+  - 人間しかできないと思われていた高度なタスクについて、予想外にうまく AI が代替してしまう可能性が見えてきて（[StableDiffusion](https://stablediffusionweb.com/) / [ChatGPT](https://chat.openai.com/)）驚きを与えている状況
 
 ---
 
@@ -250,7 +250,7 @@ AND(
 # Salesforce との融合(demo)
 
 1. Open AI API を叩き、既存のレコードの AI に詳しても良い箇所を渡して解答を得る
-   1. Einstein GPT(Sales/Service) や Salesforce 公式よりは運用コストは安そう
+   1. Einstein GPT(Sales/Service) よりは運用コストは安そう
    2. ただ、**保守性や情報漏洩**が怖い
       1. ビジネスプランが提供された際はここがカバーされる
 2. Einstein GPT(Sales/Service) など Salesforce が公式で出す機能を使う
