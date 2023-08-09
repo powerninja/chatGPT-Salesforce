@@ -6,22 +6,44 @@
 - リポジトリ:https://github.com/powerninja/chatGPT-Salesforce
 
 ```mermaid
-gantt
-    title ○○サービススケジュール
-    dateFormat  YYYY-MM-DD
+graph TD
+  User -->|HTTP/HTTPS| CF
+  CF --> S3
+  CF --> ELB
+  ELB --> EC2
+  EC2 --> RDS
+  User --> AGW
+  AGW --> ExternalAPI
+  User --> Cognito
+  User --> Lambda
+  Lambda --> DynamoDB
+  
+  subgraph "Content Delivery"
+    CF(CloudFront)
+    S3(S3 for Images)
+  end
 
-    section ﾏｲﾙｽﾄｰﾝ
-        実装            : done, milestone, 2023-01-15, 0d
-        テスト          : milestone, 2023-02-01, 0d
-        リリース        : crit, milestone, 2023-03-01, 0d
-    section Aさん
-        ○○機能実装    : crit, 2023-01-15, 10d
-    section Bさん
-        ××機能実装    : done, b1, 2023-01-16, 8d
-        △△機能実装    : active, b2, after b1, 6d
-    section Cさん
-        テスト仕様作成  : crit, active, c1, 2023-01-21, 6d
-        ××機能テスト  : c2, 2023-02-01, 7d
-        ○○機能テスト  : c3, after c2, 10d
-        △△機能テスト  : c4, after c3, 5d
+  subgraph "Load Balancing"
+    ELB(Elastic Load Balancing)
+    EC2(EC2 Instances)
+  end
+
+  subgraph "Database"
+    RDS(Amazon RDS)
+  end
+  
+  subgraph "External Services"
+    AGW(API Gateway)
+    ExternalAPI[External SaaS API]
+  end
+  
+  subgraph "User Management"
+    Cognito(Amazon Cognito)
+  end
+
+  subgraph "Serverless Components"
+    Lambda(AWS Lambda)
+    DynamoDB(DynamoDB for Sessions)
+  end
+
 ```
